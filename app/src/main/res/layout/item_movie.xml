@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="category"
+            type="com.carlostorres.technivamovieapp.data.entities.movies.MoviesResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:onClick="@{onClick}">
+
+        <View
+            android:id="@+id/viewDividerCategoryTop"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="75dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintTop_toBottomOf="@+id/viewDividerCategoryTop"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/movieTitle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_32"
+            tools:text="Five nights at Freddy's"
+            app:layout_constraintStart_toEndOf="@id/moviePoster"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerCategoryTop"/>
+
+        <TextView
+            android:id="@+id/movieDate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            tools:text="2023-10-25"
+            app:layout_constraintStart_toEndOf="@id/moviePoster"
+            app:layout_constraintTop_toBottomOf="@id/movieTitle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

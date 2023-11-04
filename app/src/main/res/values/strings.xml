@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TechnivaMovieApp</string>
+
+    <string name="input_search">Buscar</string>
+
+    <!-- Message -->
+    <string name="success_movie_list">Disfruta de tus peliculas</string>
+    <string name="error_movie_list">Tuvimos un error al obtener la lista de películas.</string>
+    <string name="error_movie_detail">Se produjo un error al obtener los detalles de la película</string>
+
+    <string name="image_description">Cinema</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.carlostorres.technivamovieapp.ui.fragment.HomeFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.carlostorres.technivamovieapp.ui.fragment.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="idMovie"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
